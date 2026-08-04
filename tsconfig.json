@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "Bundler",
+		"target": "es2022",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"types": ["node"],
+		"skipLibCheck": true,
+		"noEmit": true
+	},
+	"include": ["./**/*.ts"]
+}
