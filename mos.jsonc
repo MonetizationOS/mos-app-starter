@@ -1,0 +1,28 @@
+{
+	"id": "example",
+	"version": "1.0.0",
+	"name": "Example App",
+	"shortDescription": "An example app.",
+	"installJsonSchema": {
+		"type": "object",
+		"properties": {
+			"endpointPath": {
+				"type": "string",
+				"description": "The path that the example endpoint will be available at.",
+				"default": "/hello"
+			}
+		},
+		"required": ["endpointPath"]
+	},
+	"configureJsonSchema": {
+		"type": "object",
+		"properties": {
+			"responseMessage": {
+				"type": "string",
+				"description": "The message that the example endpoint will respond with.",
+				"default": "Hello, world!"
+			}
+		},
+		"required": ["responseMessage"]
+	}
+}
