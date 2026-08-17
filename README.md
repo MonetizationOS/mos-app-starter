@@ -1,6 +1,20 @@
-# MOS App Starter
+<div align="center">
+  <a href="https://monetizationos.com">
+  <img alt="MonetizationOS logo" src="https://app.monetizationos.com/static/monetizationos-logo.png" height="48">
+  </a>
+  <h1>MonetizationOS App Starter</h1>
+</div>
 
-Documentation and examples for building MonetizationOS apps
+Documentation and examples for building MonetizationOS apps.
+
+> [!IMPORTANT]
+> You need access from MonetizationOS before you can build or publish an app:
+>
+> - The MOS SDK (`@monetizationos/mos-sdk`) is in closed beta on a private registry.
+> - Publishing requires a `MOS_DEPLOY_KEY`.
+> - [Traits](#traits) plan provisioning is behind a feature flag.
+>
+> All three are granted manually. Request them before working through this guide.
 
 For more general documentation on MonetizationOS and available primitives, see [the MonetizationOS documentation](https://docs.monetizationos.com/docs/concepts).
 
@@ -8,7 +22,7 @@ For more general documentation on MonetizationOS and available primitives, see [
 
 A MonetizationOS app is a package of configurable entities that can be installed into a MonetizationOS organization to solve a particular business problem. Apps can be installed by multiple organizations, and can be configured differently in each organization. Apps can provide the same entities that can be built in MonetizationOS (such as endpoints, actions and plans) without the need for the installing organization to write or maintain those entities and workflow code.
 
-Apps are bundled and deployed using the [MOS SDK](https://github.com/MonetizationOS/firecrest/pkgs/npm/mos-sdk). The SDK is currently in closed beta, and access must be manually requested.
+Apps are bundled and deployed using the MOS SDK (`@monetizationos/mos-sdk`), published to the GitHub Packages npm registry. The SDK is currently in closed beta, and access must be manually requested.
 
 ### Install the MOS SDK
 
@@ -175,7 +189,7 @@ There are three distinct phases to the trait lifecycle: assignment, provisioning
 
 Traits are assigned to users via workflows. Traits can be assigned in endpoints, offer redemption, middleware or [ingest](#ingest-workflows) workflows. Assigning traits to users is a persistent operation - the traits will be stored and available in subsequent workflows and requests.
 
-See the [workflow typescript definitions](https://dev-docs.monetizationos.com/docs/api-reference/workflows/type-definitions/TraitWorkflowManagementUtils) for more information on the methods available to assign traits in a workflow.
+See the [workflow typescript definitions](https://docs.monetizationos.com/docs/api-reference/workflows/type-definitions/TraitWorkflowManagementUtils) for more information on the methods available to assign traits in a workflow.
 
 For example:
 
