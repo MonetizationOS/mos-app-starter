@@ -32,7 +32,7 @@ This repository is an example of how to build an app using the SDK. To start fro
 echo "@monetizationos:registry=https://npm.pkg.github.com" >> .npmrc
 ```
 
-Then, `npm login` into the GitHub package registry and install the sdk. You will need a GitHub personal access token with the `read:packages` scope to login:
+Then, `npm login` into the GitHub package registry and install the sdk. You will need a GitHub Personal Access Token (classic) with the `read:packages` scope to login:
 
 ```sh
 npm login --scope=@monetizationos --auth-type=legacy --registry=https://npm.pkg.github.com
@@ -159,17 +159,17 @@ applied to them as permitted by JSON Schema, for example using a regex pattern.
 
 ### Deploy the App
 
-Once your app is ready, you can publish it to your own MonetizationOS organization for manual testing. You will need a `MOS_DEPLOY_KEY`, which will be provided to you by MonetizationOS. You can pass `MOS_DEPLOY_KEY` as an environment variable to the following command, or save it in a `.env` file in the root of your project:
+Once your app is ready, you can deploy it to your own MonetizationOS organization for manual testing. You will need a `MOS_DEPLOY_KEY`, which will be provided to you by MonetizationOS. You can pass `MOS_DEPLOY_KEY` as an environment variable to the following command, or save it in a `.env` file in the root of your project:
 
 ```sh
-MOS_DEPLOY_KEY=<your-deploy-key> npx mos app publish
+MOS_DEPLOY_KEY=<your-deploy-key> npx mos app deploy
 ```
 
 or
 
 ```sh
 echo "MOS_DEPLOY_KEY=<your-deploy-key>" >> .env
-npx mos app publish
+npx mos app deploy
 ```
 
 Once deployed, you can install and test your app in your MonetizationOS organization.
