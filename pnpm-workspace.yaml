@@ -1,2 +1,6 @@
 allowBuilds:
+  esbuild: false
   msw: false
+
+minimumReleaseAgeExclude:
+  - "@monetizationos/mos-sdk@0.0.16"
